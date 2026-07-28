@@ -1,0 +1,289 @@
+{
+  "title": "Getting Started Tutorial",
+  "landingTitle": "Tutorial",
+  "landingSubtitle": "This project was generated from the template. Full step-by-step documentation is hosted on the publisher's site.",
+  "landingDescription": "Use the button below to open the full Tutorial, including clone the template repo, make generate, make feature, localization, mock data, and real API setup.",
+  "landingHint": "The documentation opens in a new browser tab.",
+  "landingLinkLabel": "Open full Tutorial documentation",
+  "landingUrlNote": "Documentation site: {{url}}",
+  "landingRepoNote": "Template repository (clone first): {{url}}",
+  "overviewTitle": "Overview",
+  "documentTitle": "Overview",
+  "guideTitle": "Tutorial",
+  "guideSubtitle": "Walkthrough for adding a new page, example Inventory. Scaffold with make feature, optional manual steps, mock data or real API, then customize branding.",
+  "previewTitle": "Preview",
+  "subtitle": "Install Volta (recommended) with Node 22.23.1 and pnpm 11.17.0, clone the template, generate your project, then configure locales and environment. Page features, branding, and API setup are in the Tutorial tab.",
+  "previewSubtitle": "Result of the Tutorial: Inventory page (same structure as make feature scope=full output).",
+  "tocTitle": "Table of Contents",
+  "devBannerTitle": "Development mode only",
+  "devBannerDescription": "This menu appears when you run make dev. Production builds (make build) never include it. Don't want it in dev either? Set VITE_SHOW_DEV_FEATURES=false in .env or .env.development.",
+  "creatorBannerTitle": "User guide",
+  "creatorBannerDescription": "Step-by-step guide for setting up your project from this template: install Volta + matching Node/pnpm, clone the repo, generate the app, add features, change the logo, set up locales, and connect your API.",
+  "quickPathTitle": "Straight to your running app",
+  "quickPathFeatureTitle": "Add a menu page",
+  "quickPathExpandSteps": "Show step by step",
+  "quickPathCollapseSteps": "Copy all at once",
+  "quickPathSectionExpand": "Show commands",
+  "quickPathSectionCollapse": "Hide",
+  "quickPathStep1Intro": "Run each command below in order.",
+  "appNameLabel": "App name",
+  "appNameAriaLabel": "Generated project folder name",
+  "appNameEdit": "Edit",
+  "appNameEditAria": "Edit app name",
+  "appNameDone": "Done",
+  "appNameDoneAria": "Lock app name",
+  "appNameClickHint": "Click to edit app name",
+  "commandModeAriaLabel": "How to run commands",
+  "commandModeMake": "make",
+  "commandModeDirect": "node & pnpm",
+  "prerequisites": {
+    "title": "Prerequisites: install first",
+    "expand": "Show tool list",
+    "collapse": "Hide tool list",
+    "intro": "Summary only. Full install steps for macOS, Linux, and Windows (Git, Node, pnpm, make, rsync) are in the template README.",
+    "osLinksHint": "README sections: macOS · Linux (Debian/Ubuntu, Fedora, Arch) · Windows (WSL or native PowerShell)",
+    "verifyHint": "Quick check: node --version (v22.x) · pnpm --version (11.x) · git --version (make and rsync optional unless you run make generate).",
+    "voltaTitle": "Recommended: Node 22.23.1 + pnpm 11.17.0",
+    "voltaSummary": "Prefer Volta. Without Volta, still use these versions. Full install steps are in the Volta guide.",
+    "voltaGuideHint": "Read the setup guide (macOS / Linux / Windows, with or without Volta):",
+    "voltaGuideLinkLabel": "Open VOLTA.md",
+    "voltaPinHint": "If you use Volta, run this in your shell first",
+    "colTool": "Tool",
+    "colVersion": "Version",
+    "colRequired": "Required",
+    "colUsedFor": "Used for",
+    "requiredYes": "Yes",
+    "requiredOptional": "Optional",
+    "requiredRecommended": "Recommended",
+    "nodeVersion": "22.x (22.23.1 recommended)",
+    "pnpmVersion": "11.x (11.17.0 recommended)",
+    "gitVersion": "any recent",
+    "makeVersion": "GNU Make",
+    "rsyncVersion": "any",
+    "nodeFor": "Runtime & build",
+    "pnpmFor": "Install dependencies & run scripts",
+    "gitFor": "Clone the template repository",
+    "makeFor": "Makefile shortcuts (make dev, make generate, etc.)",
+    "rsyncFor": "make generate only (usually pre-installed on Mac/Linux)",
+    "pnpmFallbackNote": "npm works as a fallback (npm install, npm run dev), but this project is tested with pnpm 11.17.0 on Node 22.23.1 (Volta-pinned).",
+    "makeOptionalNote": "You can run without make. Use the node & pnpm toggle in the header. Install make per OS: macOS brew install make, Linux sudo apt install make, Windows winget install GnuWin32.Make or use WSL.",
+    "readmeHint": "For full per-OS install guides and the Enable Volta section, see the Prerequisites in the template repository README.",
+    "readmeLinkLabel": "Open README",
+    "tools": {
+      "node": "Node.js",
+      "pnpm": "pnpm",
+      "git": "Git",
+      "make": "make",
+      "rsync": "rsync"
+    }
+  },
+  "quickPathCmdClone": "Clone template repository",
+  "quickPathCmdCdTemplate": "Enter template folder",
+  "quickPathCmdInstallTemplate": "Install dependencies",
+  "quickPathCmdGenerate": "Generate your app",
+  "quickPathCmdCdApp": "Enter generated app folder",
+  "quickPathCmdRemoveTemplate": "Remove cloned template folder",
+  "quickPathCmdInstallApp": "Install app dependencies",
+  "quickPathCmdDevOptional": "Run dev server (optional)",
+  "quickPathCmdDevApp": "Run dev server",
+  "quickPathCmdFeature": "Add menu page (make feature)",
+  "quickPathStep2Params": "Use label for the English sidebar text and label-id for Indonesian (written to en.json and id.json). Example: label=\"Orders\" label-id=\"Pesanan\".",
+  "quickPathScopeNote": "full = page + table + store + usecase · store = page + table + store · page = empty page only",
+  "quickPathScopeFull": "scope=full (default)",
+  "quickPathScopePage": "scope=page",
+  "quickPathManual": "Done when the app opens in your browser (usually http://localhost:5173). Demo login: admin@mail.com / password123",
+  "makeFeatureBuilder": {
+    "presetLabel": "Scope",
+    "presetPlaceholder": "Pick a scope",
+    "scopeFull": "scope=full (default)",
+    "scopePage": "scope=page",
+    "scopeInfo": {
+      "full": "page + table + store + usecase (mock in usecase)",
+      "store": "page + table + store (mock inline, no usecase file)",
+      "page": "empty page + menu wiring only (alias: empty)"
+    },
+    "nameLabel": "name",
+    "namePlaceholder": "inventory",
+    "labelLabel": "label",
+    "labelPlaceholder": "Inventory",
+    "labelIdLabel": "label-id",
+    "labelIdPlaceholder": "Inventaris",
+    "labelIdHint": "Optional, defaults to label",
+    "commandLabel": "Command",
+    "commandIncomplete": "make feature name=<feature-name>",
+    "outputTitle": "Files created / updated",
+    "outputFeature": {
+      "full": "src/features/<name>/: pages, components, stores, usecase/",
+      "store": "src/features/<name>/: pages, components, stores (no usecase/)",
+      "page": "src/features/<name>/: pages only"
+    },
+    "outputShared": "Always updated too: src/router/featureRoutesGenerate.ts, src/layouts/sidebar/featureMenuItemsGenerate.ts, nav.* in src/locales/",
+    "previewNote": "Layout is roughly like the Inventory page in",
+    "previewNotePage": "scope=page = empty page only. scope=full layout reference:",
+    "previewLink": "Preview",
+    "scopeStore": "scope=store"
+  },
+  "scaffoldParams": {
+    "title": "make feature parameters",
+    "colParam": "Parameter",
+    "colRequired": "Required",
+    "colDescription": "Description",
+    "yes": "Yes",
+    "no": "No",
+    "nameDesc": "Feature key. Creates src/features/<name>/, route /<name>, and locale key nav.<name>. Use lowercase kebab-case (e.g. inventory).",
+    "labelDesc": "English sidebar label. Written to src/locales/en.json under nav.*. Shown when the app locale is English.",
+    "labelIdDesc": "Indonesian sidebar label. Written to src/locales/id.json under nav.*. Shown when the app locale is Indonesian. If omitted, label is used for both.",
+    "scopeDesc": "What to generate: full (default) = page + table + store + usecase · store = page + table + store · page = empty page + menu wiring only."
+  },
+  "preview": {
+    "configSection": "App configuration",
+    "configDescription": "App Description (en / id)",
+    "configLogo": "Logo (light / dark)",
+    "configTitle": "App Title",
+    "configLocale": "Active Locale",
+    "featureSection": "Result: Inventory page",
+    "featureDescription": "This is the Inventory page scaffolded by make feature name=inventory label=\"Inventory\" label-id=\"Inventaris\". Follow the Tutorial tab to create it yourself.",
+    "localeNote": "Tutorial UI strings live in src/features/tutorial/locales/ (like Storybook). Feature strings live in src/locales/."
+  },
+  "steps": {
+    "prerequisites": {
+      "title": "Prerequisites: install first",
+      "description": "Recommended: Node 22.23.1 and pnpm 11.17.0. Prefer Volta - open VOLTA.md for install steps. Already set up? Skip to clone.",
+      "skipNote": "Node, pnpm, and Git already working? Skip this step and continue to"
+    },
+    "quickPath": {
+      "title": "Straight to your running app",
+      "description": "Want to see your app running locally right away? Run the commands below in order. You choose the project name when you generate.",
+      "scopeTitle": "What does this flow achieve?",
+      "scope": "From cloning the template to your app running in the browser. Adding a new menu page, branding, and API setup are in the Tutorial tab.",
+      "bullets": "Stops when the app runs locally (make dev)|Requires GNU Make or the node & pnpm toggle",
+      "skipToManual": "Prefer step by step? Skip this section and continue to",
+      "continueAfter": "App running locally? Skip steps 2-3, continue to",
+      "continueToFeature": "Want to add a new page? Continue to"
+    },
+    "clone": {
+      "title": "Clone the template repository",
+      "description": "Clone the template as a boilerplate. Continue to generate in step 3; you can skip install and dev on the template folder.",
+      "skipNote": "Already used the quick path in step 1? Skip steps 2 and 3, continue to",
+      "exploreTitle": "Install and run the template (optional)",
+      "exploreIntro": "Open if you want to explore the boilerplate before generate. After make dev or pnpm run dev, demo login: admin@mail.com / password123",
+      "exploreExpand": "Show commands",
+      "exploreCollapse": "Hide"
+    },
+    "generate": {
+      "title": "Generate a new project",
+      "description": "From the template folder, generate your app, remove the cloned template folder, install dependencies, then run the dev server.",
+      "skipNote": "Already used the quick path in step 1? Skip this step, continue to",
+      "bullets": "Default output: ../my-new-app (sibling folder, outside template)|Custom path: add out=~/projects/my-new-app to the generate command|Remove the cloned template after generate (rm -rf ../vue-dashboard-template-01)|In your generated app, Documentation & Components menus show a summary with links to the full documentation"
+    },
+    "logo": {
+      "title": "Change the logo",
+      "description": "Replace the two SVG files in public/ and point app.config.ts to them. The header switches automatically between light and dark variants.",
+      "bullets": "Replace public/logo-light.svg for light theme|Replace public/logo-dark.svg for dark theme|Update title, description.en, description.id, and logo paths in src/config/app.config.ts|HeaderLogo shows description based on active locale"
+    },
+    "guideLogo": {
+      "title": "Customize app branding",
+      "description": "Replace the default logo and set your app title and descriptions in app.config.ts. The header switches between light and dark variants automatically.",
+      "bullets": "Replace public/logo-light.svg for light theme|Replace public/logo-dark.svg for dark theme|Update title, description.en, description.id, and logo paths in src/config/app.config.ts|HeaderLogo shows description based on active locale"
+    },
+    "localization": {
+      "title": "Localization (i18n)",
+      "description": "Add UI strings in src/locales/en.json and id.json. Use useLocale() with t('key', params?) in components. Use {{param}} placeholders in JSON when a string needs dynamic values.",
+      "steps": {
+        "addKeys": "Add keys in src/locales/en.json and id.json (same structure in both files)",
+        "callT": "Call t with the key and params object",
+        "paramOrder": "EN and ID can place {{params}} in different positions, but param names must match",
+        "defaultLocale": "Set defaultLocale in src/config/app.config.ts",
+        "useStore": "Import useLocale from @/locales/localeStore and get t in your Vue component in your component"
+      }
+    },
+    "scaffold": {
+      "title": "Scaffold with make feature (shortcut)",
+      "description": "Fastest way to add an Inventory page: one command wires the page, sidebar menu, route, and locale."
+    },
+    "menu": {
+      "title": "Add menu manually (optional)",
+      "description": "Wire the Inventory page into navigation and routing by hand. Complete step 2 first so InventoryPage.vue exists.",
+      "skipNote": "Already used make feature in step 1? Skip steps 2 and 3, open",
+      "steps": {
+        "navLocale": "Add nav label and subtitle in src/locales/en.json and id.json",
+        "sidebarMenu": "Register the item in src/layouts/sidebar/featureMenuItemsGenerate.ts (or featureMenuItems.ts for manual-only)",
+        "router": "Add the lazy route in src/router/featureRoutesGenerate.ts (or featureRoutes.ts for manual-only)",
+        "sidebarIcon": "Optional: custom icon in SidebarIcons.ts, then swap icon in featureMenuItemsGenerate.ts"
+      }
+    },
+    "feature": {
+      "title": "Create feature code manually (optional)",
+      "description": "Complete standard code for an Inventory feature if you are not using the generator. Follow the folder structure, then copy each file in order.",
+      "continueNote": "When the feature files are in place, continue to step 3 for locale keys, sidebar menu, and route wiring.",
+      "skipNote": "Already used make feature in step 1? Skip steps 2 and 3, open",
+      "steps": {
+        "structure": "Folder layout under src/features/inventory/",
+        "page": "InventoryPage.vue: title, subtitle, and table component",
+        "table": "InventoryTable.vue: DataTable with columns and pagination",
+        "usecase": "inventoryUsecase.ts: mock data with delay, returns PaginatedResult",
+        "store": "inventoryStore.ts (Pinia): fetch state, page, pageSize"
+      }
+    },
+    "mockData": {
+      "title": "Mock data (default)",
+      "description": "Generated features ship with mock data inside the usecase file. No backend or .env is required to develop UI flows end-to-end.",
+      "realApiNote": "Want to connect a real backend instead? Continue to",
+      "steps": {
+        "usecase": "make feature puts mock data in usecase/*.ts",
+        "repository": "Alternative: centralize mock in apiRepository.ts",
+        "mapper": "Map models via src/models/model.map.ts",
+        "usersReference": "See Users feature for full CRUD with drawers"
+      }
+    },
+    "realApi": {
+      "title": "Connect a real API (optional)",
+      "description": "When your backend is ready, wire the Inventory feature to a live endpoint: set the base URL, define API response types, map them to domain types, then call apiSource from the usecase.",
+      "skipNote": "Still using mock data from step 4? Open",
+      "steps": {
+        "env": "Set VITE_API_BASE_URL in .env (default) or override in .env.development / .env.production per mode.",
+        "config": "backendService reads appConfig.apiBaseUrl (defaults to /api)",
+        "response": "Add ApiInventoryItemResponse in src/models/model.response.ts (snake_case, matches backend JSON)",
+        "type": "Add InventoryItem in src/models/model.type.ts (camelCase, used by store and table)",
+        "mapper": "Add toInventoryItem and toPaginatedInventory in src/models/model.map.ts",
+        "apiSource": "Add getInventory() in src/datasource/network/apiSource.ts, returns raw API response",
+        "usecase": "inventoryUsecase calls apiSource.getInventory() and maps with toPaginatedInventory. Store and page stay unchanged"
+      }
+    },
+    "environment": {
+      "title": "Environment (development & production)",
+      "description": "VITE_* variables live in .env by default; .env.development and .env.production override per mode when needed.",
+      "steps": {
+        "twoFiles": ".env holds defaults for all modes. .env.development (make dev) and .env.production (make build) only override vars that differ per mode.",
+        "development": "Development: local API, Documentation & Components menu enabled",
+        "production": "Production: live API server, set dev feature flags for your deploy",
+        "apiUrl": "VITE_API_BASE_URL: different endpoint per mode. Use a local backend in dev and your live server URL in production",
+        "devFeatures": "VITE_SHOW_DEV_FEATURES: show or hide Documentation & Components menu",
+        "scrollToTop": "VITE_ENABLE_SCROLL_TO_TOP: scroll-to-top button on all pages (defaults to true)",
+        "example": "Full variable reference in .env"
+      }
+    },
+    "tutorialAddPage": {
+      "title": "Add pages & features",
+      "description": "Scaffold a new menu page with make feature, optional manual wiring, mock data, and optional real API connection.",
+      "linkLabel": "Open Tutorial tab →"
+    },
+    "tutorialBranding": {
+      "title": "App branding & logo",
+      "description": "Customize logo, app title, and locale-specific descriptions for your generated app.",
+      "linkLabel": "See branding steps in Tutorial →"
+    },
+    "tutorialDataLayer": {
+      "title": "Mock data & real API",
+      "description": "Develop with inline mock data first, then connect a live backend when ready.",
+      "linkLabel": "See data setup in Tutorial →"
+    }
+  },
+  "creatorDeploy": {
+    "welcomeTitle": "Want to try the app?",
+    "welcomeMessage": "This is the live demo. To test the full app on your machine, clone the repository and run it locally:",
+    "viewRepo": "Open repository",
+    "dismiss": "Got it"
+  },
+  "quickPathScopeStore": "scope=store"
+}

@@ -1,0 +1,5 @@
+# pnpm 11 (Node.js 22+): allow lifecycle scripts for packages that need native builds.
+# Without these, `pnpm install` fails with ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true
+  vue-demi: true

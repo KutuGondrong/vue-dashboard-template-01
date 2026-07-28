@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+    color-scheme: light;
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.stone.300') theme('colors.stone.100');
+  }
+
+  html.dark {
+    color-scheme: dark;
+    scrollbar-color: theme('colors.surface.500') theme('colors.surface.900');
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-900 dark:bg-surface-950 dark:text-stone-100;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-stone-100 dark:bg-surface-900;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-stone-300 dark:bg-surface-600;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-stone-400 dark:bg-surface-500;
+  }
+
+  *::-webkit-scrollbar-corner {
+    @apply bg-stone-100 dark:bg-surface-900;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-surface-900;
+  }
+
+  /* Shared panel chrome — cards, settings boxes, auth card, etc. */
+  .surface-panel {
+    @apply border border-stone-200 bg-white dark:border-surface-600 dark:bg-surface-800;
+  }
+
+  .surface-panel-muted {
+    @apply border border-stone-200 bg-stone-50 dark:border-surface-600 dark:bg-surface-700;
+  }
+
+  .surface-raised {
+    @apply border border-stone-200 bg-white dark:border-surface-600 dark:bg-surface-700;
+  }
+
+  /* Storybook States × Themes — isolate preview from app-wide dark mode */
+  .theme-preview-light {
+    color-scheme: light;
+    isolation: isolate;
+  }
+
+  .theme-preview-dark {
+    color-scheme: dark;
+    isolation: isolate;
+  }
+
+  .compact-field-messages .field-message-spacer {
+    display: none;
+  }
+
+  .filter-toolbar__row {
+    @apply flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4;
+  }
+
+  .filter-toolbar__fields {
+    @apply flex min-w-0 flex-1 flex-col gap-3 sm:flex-row sm:items-end sm:gap-3;
+  }
+
+  .filter-toolbar__field {
+    @apply min-w-0;
+  }
+
+  .filter-toolbar__field--grow {
+    @apply flex-1;
+  }
+
+  .filter-toolbar__field--sm {
+    @apply w-full sm:max-w-[14rem];
+  }
+
+  .filter-toolbar__field :is(input, [role='combobox']) {
+    @apply h-10 py-2;
+  }
+
+  .filter-toolbar__actions {
+    @apply shrink-0;
+  }
+
+  .filter-toolbar__submit {
+    @apply h-10 w-full px-6 sm:w-auto sm:min-w-[7.5rem];
+  }
+}
+
+@keyframes chart-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "title": "Tutorial Memulai Proyek",
+  "landingTitle": "Tutorial",
+  "landingSubtitle": "Project ini di-generate dari template. Dokumentasi lengkap langkah demi langkah ada di situs publisher.",
+  "landingDescription": "Gunakan tombol di bawah untuk membuka Tutorial lengkap, termasuk clone repo template, make generate, make feature, lokalisasi, mock data, dan setup API nyata.",
+  "landingHint": "Dokumentasi akan terbuka di tab browser baru.",
+  "landingLinkLabel": "Buka dokumentasi Tutorial lengkap",
+  "landingUrlNote": "Situs dokumentasi: {{url}}",
+  "landingRepoNote": "Repository template (clone dulu): {{url}}",
+  "overviewTitle": "Overview",
+  "documentTitle": "Overview",
+  "guideTitle": "Tutorial",
+  "guideSubtitle": "Panduan menambah halaman baru, contoh Inventaris. Scaffold dengan make feature, langkah manual opsional, mock data atau API nyata, lalu sesuaikan branding.",
+  "previewTitle": "Preview",
+  "subtitle": "Install Volta (disarankan) dengan Node 22.23.1 dan pnpm 11.17.0, clone template, generate proyek, lalu atur locale dan environment. Fitur halaman, branding, dan setup API ada di tab Tutorial.",
+  "previewSubtitle": "Hasil dari Tutorial: halaman Inventaris (struktur sama dengan output make feature scope=full).",
+  "tocTitle": "Daftar Isi",
+  "devBannerTitle": "Hanya mode development",
+  "devBannerDescription": "Menu ini muncul saat menjalankan make dev. Build production (make build) tidak pernah menyertakannya. Tidak mau tampil di dev? Set VITE_SHOW_DEV_FEATURES=false di .env atau .env.development.",
+  "creatorBannerTitle": "Panduan penggunaan",
+  "creatorBannerDescription": "Panduan langkah demi langkah untuk setup proyek dari template ini: install Volta + Node/pnpm yang cocok, clone repo, generate app, tambah fitur, ganti logo, atur bahasa, dan sambungkan ke API.",
+  "quickPathTitle": "Cara cepat menjalankan app di local",
+  "quickPathFeatureTitle": "Tambah halaman menu",
+  "quickPathExpandSteps": "Tampilkan per langkah",
+  "quickPathCollapseSteps": "Salin semua sekaligus",
+  "quickPathSectionExpand": "Lihat perintah",
+  "quickPathSectionCollapse": "Sembunyikan",
+  "quickPathStep1Intro": "Jalankan setiap perintah di bawah secara berurutan.",
+  "appNameLabel": "Nama app",
+  "appNameAriaLabel": "Nama folder proyek hasil generate",
+  "appNameEdit": "Ubah",
+  "appNameEditAria": "Ubah nama app",
+  "appNameDone": "Selesai",
+  "appNameDoneAria": "Kunci nama app",
+  "appNameClickHint": "Klik untuk mengubah nama app",
+  "commandModeAriaLabel": "Cara menjalankan perintah",
+  "commandModeMake": "make",
+  "commandModeDirect": "node & pnpm",
+  "prerequisites": {
+    "title": "Persiapan: install dulu",
+    "expand": "Lihat daftar tool",
+    "collapse": "Sembunyikan daftar tool",
+    "intro": "Ringkasan saja. Panduan install lengkap macOS, Linux, dan Windows (Git, Node, pnpm, make, rsync) ada di README template.",
+    "osLinksHint": "Bagian README: macOS · Linux (Debian/Ubuntu, Fedora, Arch) · Windows (WSL atau PowerShell native)",
+    "verifyHint": "Cek cepat: node --version (v22.x) · pnpm --version (11.x) · git --version (make dan rsync opsional kecuali pakai make generate).",
+    "voltaTitle": "Disarankan: Node 22.23.1 + pnpm 11.17.0",
+    "voltaSummary": "Utamakan Volta. Tanpa Volta, tetap pakai versi ini. Langkah install lengkap ada di panduan Volta.",
+    "voltaGuideHint": "Baca panduan setup (macOS / Linux / Windows, dengan atau tanpa Volta):",
+    "voltaGuideLinkLabel": "Buka VOLTA.id.md",
+    "voltaPinHint": "Kalau pakai Volta, jalankan dulu ini di shell",
+    "colTool": "Tool",
+    "colVersion": "Versi",
+    "colRequired": "Wajib",
+    "colUsedFor": "Untuk",
+    "requiredYes": "Ya",
+    "requiredOptional": "Opsional",
+    "requiredRecommended": "Disarankan",
+    "nodeVersion": "22.x (22.23.1 disarankan)",
+    "pnpmVersion": "11.x (11.17.0 disarankan)",
+    "gitVersion": "versi terbaru",
+    "makeVersion": "GNU Make",
+    "rsyncVersion": "any",
+    "nodeFor": "Runtime & build",
+    "pnpmFor": "Install dependencies & jalankan script",
+    "gitFor": "Clone repository template",
+    "makeFor": "Shortcut Makefile (make dev, make generate, dll.)",
+    "rsyncFor": "make generate saja (biasanya sudah ada di Mac/Linux)",
+    "pnpmFallbackNote": "npm bisa dipakai sebagai fallback (npm install, npm run dev), tapi project ini ditest dengan pnpm 11.17.0 di Node 22.23.1 (Volta-pinned).",
+    "makeOptionalNote": "Tanpa make tetap bisa jalan. Pilih node & pnpm di toggle kanan atas. Install make per OS: macOS pakai brew install make, Linux sudo apt install make, Windows winget install GnuWin32.Make atau pakai WSL.",
+    "readmeHint": "Untuk panduan install lengkap per OS dan bagian Aktifkan Volta, lihat Prerequisites di README repository template.",
+    "readmeLinkLabel": "Buka README",
+    "tools": {
+      "node": "Node.js",
+      "pnpm": "pnpm",
+      "git": "Git",
+      "make": "make",
+      "rsync": "rsync"
+    }
+  },
+  "quickPathCmdClone": "Clone repository template",
+  "quickPathCmdCdTemplate": "Masuk ke folder template",
+  "quickPathCmdInstallTemplate": "Install dependencies",
+  "quickPathCmdGenerate": "Generate aplikasi",
+  "quickPathCmdCdApp": "Masuk ke folder app hasil generate",
+  "quickPathCmdRemoveTemplate": "Hapus folder template yang di-clone",
+  "quickPathCmdInstallApp": "Install dependencies app",
+  "quickPathCmdDevOptional": "Jalankan dev server (opsional)",
+  "quickPathCmdDevApp": "Jalankan dev server",
+  "quickPathCmdFeature": "Tambah halaman menu (make feature)",
+  "quickPathStep2Params": "Pakai label untuk teks sidebar bahasa Inggris dan label-id untuk Indonesia (ditulis ke en.json dan id.json). Contoh: label=\"Orders\" label-id=\"Pesanan\".",
+  "quickPathScopeNote": "full = page + table + store + usecase · store = page + table + store · page = empty page only",
+  "quickPathScopeFull": "scope=full (default)",
+  "quickPathScopePage": "scope=page",
+  "quickPathManual": "Selesai saat app terbuka di browser (biasanya http://localhost:5173). Login demo: admin@mail.com / password123",
+  "makeFeatureBuilder": {
+    "presetLabel": "Scope",
+    "presetPlaceholder": "Pilih scope",
+    "scopeFull": "scope=full (default)",
+    "scopePage": "scope=page",
+    "scopeInfo": {
+      "full": "page + table + store + usecase (mock in usecase)",
+      "store": "page + table + store (mock inline, no usecase file)",
+      "page": "empty page + menu wiring only (alias: empty)"
+    },
+    "nameLabel": "name",
+    "namePlaceholder": "inventory",
+    "labelLabel": "label",
+    "labelPlaceholder": "Inventory",
+    "labelIdLabel": "label-id",
+    "labelIdPlaceholder": "Inventaris",
+    "labelIdHint": "Opsional, default = label",
+    "commandLabel": "Perintah",
+    "commandIncomplete": "make feature name=<nama-feature>",
+    "outputTitle": "File yang dibuat / diubah",
+    "outputFeature": {
+      "full": "src/features/<name>/: pages, components, stores, usecase/",
+      "store": "src/features/<name>/: pages, components, stores (no usecase/)",
+      "page": "src/features/<name>/: pages only"
+    },
+    "outputShared": "Always updated too: src/router/featureRoutesGenerate.ts, src/layouts/sidebar/featureMenuItemsGenerate.ts, nav.* in src/locales/",
+    "previewNote": "Tampilan kurang lebih seperti halaman Inventaris di",
+    "previewNotePage": "scope=page = halaman kosong. Referensi layout scope=full ada di",
+    "previewLink": "Preview",
+    "scopeStore": "scope=store"
+  },
+  "scaffoldParams": {
+    "title": "Parameter make feature",
+    "colParam": "Parameter",
+    "colRequired": "Wajib",
+    "colDescription": "Keterangan",
+    "yes": "Ya",
+    "no": "Tidak",
+    "nameDesc": "Kunci feature. Membuat src/features/<name>/, route /<name>, dan locale key nav.<name>. Pakai lowercase kebab-case (contoh: inventory).",
+    "labelDesc": "Label sidebar bahasa Inggris. Ditulis ke src/locales/en.json under nav.*. Tampil saat locale app English.",
+    "labelIdDesc": "Label sidebar bahasa Indonesia. Ditulis ke src/locales/id.json under nav.*. Tampil saat locale app Indonesia. Jika tidak diisi, label dipakai untuk keduanya.",
+    "scopeDesc": "What to generate: full (default) = page + table + store + usecase · store = page + table + store · page = empty page + menu wiring only."
+  },
+  "preview": {
+    "configSection": "Konfigurasi aplikasi",
+    "configDescription": "Deskripsi Aplikasi (en / id)",
+    "configLogo": "Logo (light / dark)",
+    "configTitle": "Judul Aplikasi",
+    "configLocale": "Locale Aktif",
+    "featureSection": "Hasil: halaman Inventaris",
+    "featureDescription": "Ini halaman Inventaris hasil scaffold make feature name=inventory label=\"Inventory\" label-id=\"Inventaris\". Ikuti tab Tutorial untuk membuatnya sendiri.",
+    "localeNote": "String UI Tutorial ada di src/features/tutorial/locales/ (seperti Storybook). String feature ada di src/locales/."
+  },
+  "steps": {
+    "prerequisites": {
+      "title": "Persiapan: install dulu",
+      "description": "Disarankan: Node 22.23.1 dan pnpm 11.17.0. Utamakan Volta - buka VOLTA.id.md untuk langkah install. Sudah siap? Lewati ke clone.",
+      "skipNote": "Node, pnpm, dan Git sudah jalan? Lewati langkah ini, lanjut ke"
+    },
+    "quickPath": {
+      "title": "Cara cepat menjalankan app di local",
+      "description": "Ingin langsung lihat app Anda jalan di local? Ikuti perintah di bawah berurutan. Anda bisa tentukan nama proyek sendiri saat generate.",
+      "scopeTitle": "Apa yang dicapai alur ini?",
+      "scope": "Dari clone template sampai app Anda jalan di browser. Menambah halaman menu, branding, dan setup API ada di tab Tutorial.",
+      "bullets": "Hanya sampai app jalan di local (make dev)|Butuh GNU Make atau toggle node & pnpm",
+      "skipToManual": "Mau pelan-pelan? Lewati bagian ini, lanjut ke",
+      "continueAfter": "App sudah jalan di local? Lewati langkah 2-3, lanjut ke",
+      "continueToFeature": "Mau tambah halaman baru? Lanjut ke"
+    },
+    "clone": {
+      "title": "Clone repository template",
+      "description": "Clone template sebagai boilerplate. Langsung lanjut generate di langkah 3; install dan dev di template boleh dilewati.",
+      "skipNote": "Sudah pakai jalur cepat di langkah 1? Lewati langkah 2 dan 3, lanjut ke",
+      "exploreTitle": "Install dan jalankan template (opsional)",
+      "exploreIntro": "Buka jika ingin explore boilerplate sebelum generate. Setelah make dev atau pnpm run dev, login demo: admin@mail.com / password123",
+      "exploreExpand": "Lihat perintah",
+      "exploreCollapse": "Sembunyikan"
+    },
+    "generate": {
+      "title": "Generate proyek baru",
+      "description": "Dari folder template, generate app dengan nama Anda, hapus folder template yang di-clone, install dependencies, lalu jalankan dev server.",
+      "skipNote": "Sudah pakai jalur cepat di langkah 1? Lewati langkah ini, lanjut ke",
+      "bullets": "Default output: ../my-new-app (folder sibling, di luar template)|Path custom: tambah out=~/projects/my-new-app pada perintah generate|Hapus folder template setelah generate (rm -rf ../vue-dashboard-template-01)|Di app hasil generate, menu Tutorial & Komponen menampilkan ringkasan dengan link ke dokumentasi lengkap"
+    },
+    "logo": {
+      "title": "Ubah logo",
+      "description": "Ganti dua file SVG di public/ dan arahkan app.config.ts ke file tersebut. Header otomatis berganti antara versi light dan dark.",
+      "bullets": "Ganti public/logo-light.svg untuk tema terang|Ganti public/logo-dark.svg untuk tema gelap|Update title, description.en, description.id, dan path logo di src/config/app.config.ts|HeaderLogo menampilkan description sesuai locale aktif"
+    },
+    "guideLogo": {
+      "title": "Sesuaikan branding aplikasi",
+      "description": "Ganti logo default dan atur judul serta deskripsi aplikasi di app.config.ts. Header otomatis berganti antara varian light dan dark.",
+      "bullets": "Ganti public/logo-light.svg untuk tema terang|Ganti public/logo-dark.svg untuk tema gelap|Update title, description.en, description.id, dan path logo di src/config/app.config.ts|HeaderLogo menampilkan description sesuai locale aktif"
+    },
+    "localization": {
+      "title": "Localization (i18n)",
+      "description": "Tambahkan string UI di src/locales/en.json dan id.json. Pakai useLocale() dengan t('key', params?) di komponen. Gunakan placeholder {{param}} di JSON jika string butuh nilai dinamis.",
+      "steps": {
+        "addKeys": "Tambah key di src/locales/en.json dan id.json (struktur sama di kedua file)",
+        "callT": "Panggil t dengan key dan object params",
+        "paramOrder": "EN dan ID boleh beda posisi {{param}}, tapi nama param harus sama",
+        "defaultLocale": "Atur defaultLocale di src/config/app.config.ts",
+        "useStore": "Import useLocale dan ambil t di komponen"
+      }
+    },
+    "scaffold": {
+      "title": "Scaffold dengan make feature (shortcut)",
+      "description": "Cara tercepat menambah halaman Inventaris: satu perintah menghubungkan page, menu sidebar, route, dan locale."
+    },
+    "menu": {
+      "title": "Tambah menu manual (opsional)",
+      "description": "Hubungkan halaman Inventaris ke navigasi dan routing secara manual. Selesaikan langkah 2 dulu agar InventoryPage.vue sudah ada.",
+      "skipNote": "Sudah pakai make feature di langkah 1? Lewati langkah 2 dan 3, buka",
+      "steps": {
+        "navLocale": "Tambah label nav dan subtitle di src/locales/en.json dan id.json",
+        "sidebarMenu": "Daftarkan item di src/layouts/sidebar/featureMenuItemsGenerate.ts (atau featureMenuItems.ts untuk manual saja)",
+        "router": "Tambah lazy route di src/router/featureRoutesGenerate.ts (atau featureRoutes.ts untuk manual saja)",
+        "sidebarIcon": "Opsional: icon kustom di SidebarIcons.ts, lalu ganti icon di featureMenuItemsGenerate.ts"
+      }
+    },
+    "feature": {
+      "title": "Buat kode feature manual (opsional)",
+      "description": "Kode standar lengkap untuk feature Inventaris jika tidak memakai generator. Ikuti struktur folder, lalu salin setiap file berurutan.",
+      "continueNote": "Setelah file feature siap, lanjut ke langkah 3 untuk locale, menu sidebar, dan route.",
+      "skipNote": "Sudah pakai make feature di langkah 1? Lewati langkah 2 dan 3, buka",
+      "steps": {
+        "structure": "Struktur folder src/features/inventory/",
+        "page": "InventoryPage.vue: title, subtitle, dan komponen table",
+        "table": "InventoryTable.vue: DataTable dengan kolom dan pagination",
+        "usecase": "inventoryUsecase.ts: mock data dengan delay, return PaginatedResult",
+        "store": "inventoryStore.ts (Pinia): state fetch, page, pageSize"
+      }
+    },
+    "mockData": {
+      "title": "Mock data (default)",
+      "description": "Feature hasil generate sudah include mock data di file usecase. Tidak perlu backend atau .env untuk develop alur UI end-to-end.",
+      "realApiNote": "Ingin hubungkan backend nyata? Lanjut ke",
+      "steps": {
+        "usecase": "make feature menaruh mock data di usecase/*.ts",
+        "repository": "Alternatif: pusatkan mock di apiRepository.ts",
+        "mapper": "Model di-map lewat src/models/model.map.ts",
+        "usersReference": "Lihat fitur Users untuk CRUD lengkap dengan drawer"
+      }
+    },
+    "realApi": {
+      "title": "Hubungkan API nyata (opsional)",
+      "description": "Saat backend siap, hubungkan fitur Inventaris ke endpoint live: atur base URL, definisikan tipe response API, map ke tipe domain, lalu panggil apiSource dari usecase.",
+      "skipNote": "Masih pakai mock data dari langkah 4? Buka",
+      "steps": {
+        "env": "Set VITE_API_BASE_URL di .env (default) atau override di .env.development / .env.production per mode.",
+        "config": "backendService membaca appConfig.apiBaseUrl (default /api)",
+        "response": "Tambah ApiInventoryItemResponse di src/models/model.response.ts (snake_case, sesuai JSON backend)",
+        "type": "Tambah InventoryItem di src/models/model.type.ts (camelCase, dipakai store dan table)",
+        "mapper": "Tambah toInventoryItem dan toPaginatedInventory di src/models/model.map.ts",
+        "apiSource": "Tambah getInventory() di src/datasource/network/apiSource.ts, return response API mentah",
+        "usecase": "inventoryUsecase memanggil apiSource.getInventory() lalu map dengan toPaginatedInventory. Store dan page tidak berubah"
+      }
+    },
+    "environment": {
+      "title": "Environment (development & production)",
+      "description": "Variabel VITE_* ada di .env sebagai default; .env.development dan .env.production override per mode bila perlu.",
+      "steps": {
+        "twoFiles": ".env berisi default semua mode. .env.development (make dev) dan .env.production (make build) hanya override variabel yang beda per mode.",
+        "development": "Development: local API, Documentation & Components menu enabled",
+        "production": "Production: API server live, atur flag dev feature sesuai kebutuhan deploy",
+        "apiUrl": "VITE_API_BASE_URL: endpoint berbeda per mode. Dev pakai backend lokal, production pakai URL server live",
+        "devFeatures": "VITE_SHOW_DEV_FEATURES: show or hide Documentation & Components menu",
+        "scrollToTop": "VITE_ENABLE_SCROLL_TO_TOP: tombol scroll-to-top di semua halaman (default true)",
+        "example": "Referensi lengkap variabel ada di .env"
+      }
+    },
+    "tutorialAddPage": {
+      "title": "Tambah halaman & fitur",
+      "description": "Scaffold halaman menu baru dengan make feature, wiring manual opsional, mock data, dan koneksi API nyata opsional.",
+      "linkLabel": "Buka tab Tutorial →"
+    },
+    "tutorialBranding": {
+      "title": "Branding & logo aplikasi",
+      "description": "Sesuaikan logo, judul aplikasi, dan deskripsi per locale untuk app hasil generate.",
+      "linkLabel": "Lihat langkah branding di Tutorial →"
+    },
+    "tutorialDataLayer": {
+      "title": "Mock data & API nyata",
+      "description": "Mulai dengan mock data inline, lalu hubungkan backend live saat siap.",
+      "linkLabel": "Lihat setup data di Tutorial →"
+    }
+  },
+  "creatorDeploy": {
+    "welcomeTitle": "Mau coba aplikasinya?",
+    "welcomeMessage": "Ini demo live. Untuk mencoba aplikasi lengkap di komputer Anda, clone repository berikut dan jalankan sendiri:",
+    "viewRepo": "Buka repository",
+    "dismiss": "Mengerti"
+  },
+  "quickPathScopeStore": "scope=store"
+}
